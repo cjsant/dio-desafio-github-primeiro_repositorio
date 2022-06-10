@@ -5,8 +5,8 @@ O Git Bash é um terminal extendido para otimizar o uso do Git.
 
 COMANDOS GIT:
 
-
-1 -CRIANDO CLONE NO GIT:
+# Passo - a - Passo #
+01 -CRIANDO CLONE NO GIT: 
 1.a- No GitHub entrar na aba <código>, menu CLONE e copiar o endereço do repositório desejado.
 1.b- No Explorador de arquivo do Windows selecionar pasta desejada,clicando com o botão direito do mause, abrir o terminal comandos "Git Bash Here", para dar comandos.
 1.c- Com o terminal Git Bash aberto, digitar '$ git clone' e colar o endereço copiado na aba CLONE, que pose ser: HTTPS, SSH, Github CLI. Optaremos por "HTTPS" 
@@ -21,7 +21,7 @@ remote: Compressing objects: 100% (4/4), done.
 remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (6/6), done.
 
-2 - git status -> mostra o status da pasta.
+02 - git status -> mostra o status da pasta.
 
 2_EX:. 
   $ git status
@@ -36,6 +36,50 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
+
+03 - Adicionar o file. Com os comandos "  $ git add . "    ou    " git add -a "
+
+ $ git add . ou  git add -a
+3_EX:.
+
+04 - Ver o statos da pasta comando " git status "
+$ git status
+--------------------------------------------------------------------------------------
+>resposta:
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+--------------------------------------------------------------------------------------
+ATENÇÃO: O arquivo só foi adicionado no controle de Versão local, agora devemos dar o
+         comando " commit " , é uma boa pratica sempre colocar comentários coerentes"
+
+05 - Registrar alterações no repositório. "commit " cria o SnapShot (Foto) do arquivo.
+
+git commit -m "comentários coerentes"  
+-m = condição para colocar comentário
+
+$ git commit -m "Inclusão das anotações do curso de git/GitHub"
+>resposta:
+[main ef08968] Inclusão das anotações do curso de git/GitHub
+ 1 file changed, 41 insertions(+)
+ create mode 100644 "Introdu\303\247\303\243o ao Git e GitHub/Anota\303\247\303\265es.txt"
+----------------------------------------------------------------------------------------
+06 - git push origin main - Atualizar árbitros remotos junto com objetos associados 
+
+ro_repositorio/Introdução ao Git e GitHub (main)
+$ C origin main
+
+>resposta:
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 1.08 KiB | 1.08 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/cjsant/dio-desafio-github-primeiro_repositorio.git
+   954688b..ef08968  main -> main
 
 
 
